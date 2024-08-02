@@ -1,0 +1,14 @@
+running docker
+    - docker run -d --name presto-container -p 8080:8080 presto-app
+    - docker exec -it presto-container /bin/sh
+
+
+Penjelasan parameter:
+    -d: Menjalankan kontainer di background (detached mode).
+    --name presto-container: Memberi nama kontainer Anda, dalam hal ini presto-container.
+    -p 8080:8080: Meneruskan port 8080 dari host ke port 8080 di dalam kontainer. Sesuaikan dengan port yang digunakan oleh aplikasi Anda.
+    presto-app: Nama image yang Anda buat.
+
+jika dari docker compose cukup ketik
+    - docker-compose up
+    - docker-compose exec [nama_container] /bin/bash
